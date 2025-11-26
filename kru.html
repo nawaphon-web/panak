@@ -1,0 +1,239 @@
+    <style>
+    .staff-section {
+        margin-top: 60px;
+    }
+
+    .staff-title {
+        text-align: center;
+        font-size: 2rem;
+        color: var(--primary-color);
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .staff-title::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: var(--primary-color);
+        margin: 10px auto 0;
+        border-radius: 10px;
+    }
+
+    .staff-description {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 40px;
+        color: #555;
+        font-size: 1rem;
+    }
+
+    /* ===== บุคลากรคนแรก (การ์ดใหญ่) ===== */
+    .staff-top {
+        max-width: 500px;
+        margin: 0 auto 50px;
+    }
+
+    /* ===== กริดบุคลากรครูผู้สอน 3 บน 3 ล่าง ===== */
+    .staff-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .staff-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        transition: 0.3s;
+        border: 1px solid #eee;
+    }
+
+    .staff-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 15px 30px rgba(255, 0, 128, 0.20);
+        border-color: var(--primary-color);
+    }
+
+    /* 🔥 แก้สมส่วนรูปใหม่ */
+    .staff-img-wrapper {
+        width: 100%;
+        padding-top: 125%; /* อัตราส่วนรูปสูง:กว้าง = 5:4 (ปรับได้ตามต้องการ) */
+        position: relative;
+        overflow: hidden;
+        border-bottom: 5px solid var(--primary-color);
+        border-radius: 15px 15px 0 0;
+    }
+
+    .staff-img-wrapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* 🔹 ใช้ contain ให้เห็นทั้งรูป ไม่โดนครอป */
+        object-position: center;
+        background-color: #f9f9f9;
+    }
+
+    .staff-info {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .staff-name {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .staff-role {
+        font-size: 0.9rem;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .staff-detail {
+        font-size: 0.85rem;
+        color: #555;
+        background-color: #fff0f7;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .staff-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 540px) {
+        .staff-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    </style>
+
+    <section class="staff-section" id="staff">
+        <h2 class="staff-title">บุคลากรประจำแผนก</h2>
+
+        <section class="staff-section" id="staff">
+        <h3 class="staff-title">หัวหน้าแผนก</h3>
+
+        <!-- การ์ดใหญ่ 1 คน -->
+        <div class="staff-top">
+            <div class="staff-card">
+                <div class="staff-img-wrapper">
+                    <img src="https://www.loeitech.ac.th/admin/uploads/ltc_personal/profile_690da12e3677e.jpeg">
+                </div>
+                <div class="staff-info">
+                    <div class="staff-name">นางจรัสศรี แก้วอาสา</div>
+                    <div class="staff-role">ครูชำนาญการพิเศษ (หัวหน้าแผนก)</div>
+                    <div class="staff-detail">
+                        - ดูแลหลักสูตรและมาตรฐานวิชาชีพ<br>
+                        - เชี่ยวชาญด้านระบบเครือข่ายและความปลอดภัย<br>
+                        - ประสบการณ์ 15 ปีในสายงานเทคโนโลยีคอมพิวเตอร์
+                    </div>
+                </div>
+            </div>
+        </div>
+    <section class="staff-section" id="staff">
+        <h4 class="staff-title">บุคลากรประจำแผนก</h4>
+        <!-- 6 คนด้านล่าง -->
+        <div class="staff-grid">
+
+            <div class="staff-card">
+                <div class="staff-img-wrapper">
+                    <img src="https://www.loeitech.ac.th/admin/uploads/ltc_personal/profile_690da1572ec1a.jpeg">
+                </div>
+                <div class="staff-info">
+                    <div class="staff-name">นางสาวกุสุมา ชาธรรมา</div>
+                    <div class="staff-role">ครูอัตราจ้าง</div>
+                    <div class="staff-detail">
+                        แผนกวิชาเทคโนโลยีคอมพิวเตอร์
+                    </div>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <div class="staff-img-wrapper">
+                    <img src="https://www.loeitech.ac.th/admin/uploads/ltc_personal/profile_690da0b646ffd.jpeg">
+                </div>
+                <div class="staff-info">
+                    <div class="staff-name">นางสาวณัฎฐนันท์ สมันพร้อม</div>
+                    <div class="staff-role">ข้าราชการครู</div>
+                    <div class="staff-detail">
+                        แผนกวิชาเทคโนโลยีคอมพิวเตอร์
+                    </div>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <div class="staff-img-wrapper">
+                    <img src="https://www.loeitech.ac.th/admin/uploads/ltc_personal/profile_690da10263f6f.jpeg">
+                </div>
+                <div class="staff-info">
+                    <div class="staff-name">นางสาวพนาวัลย์ ผลสุวรรณ</div>
+                    <div class="staff-role">ข้าราชการครู</div>
+                    <div class="staff-detail">
+                        แผนกวิชาเทคโนโลยีคอมพิวเตอร์
+                    </div>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <div class="staff-img-wrapper">
+                    <img src="https://www.loeitech.ac.th/admin/uploads/ltc_personal/profile_690da1cdad948.jpeg">
+                </div>
+                <div class="staff-info">
+                    <div class="staff-name">นายพงศกร ทวีทรัพย์</div>
+                    <div class="staff-role">ครูอัตราจ้าง</div>
+                    <div class="staff-detail">
+                        แผนกวิชาเทคโนโลยีคอมพิวเตอร์<br>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <div class="staff-img-wrapper">
+                    <img src="https://www.loeitech.ac.th/admin/uploads/ltc_personal/profile_690da082105f0.jpeg">
+                </div>
+                <div class="staff-info">
+                    <div class="staff-name">นายศรัณย์ นครไพร</div>
+                    <div class="staff-role">ข้าราชการครู</div>
+                    <div class="staff-detail">
+                        แผนกวิชาเทคโนโลยีคอมพิวเตอร์<br>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="staff-card">
+                <div class="staff-img-wrapper">
+                    <img src="https://www.loeitech.ac.th/admin/uploads/ltc_personal/profile_690da0a2c10ec.jpeg">
+                </div>
+                <div class="staff-info">
+                    <div class="staff-name">นายอาณัต ศรีบุรินทร์</div>
+                    <div class="staff-role">ครูอัตราจ้าง</div>
+                    <div class="staff-detail">
+                    แผนกวิชาเทคโนโลยีคอมพิวเตอร์<br>
+                        
+                    </div>
+                </div>
+            </div>
+ </div>
+ 
+ </div>
+        <a href="files/ชื่อไฟล์เพื่อน.pdf" target="_blank" class="staff-btn">หลักสูตร</a>
+    </div>
+</div>
+    </div>
+</div>
+        </div>
+    </section>
