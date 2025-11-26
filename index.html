@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แผนกวิชาเทคโนโลยีสารสนเทศ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS Reset & Global Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- Header / Hero Section --- */
+        header {
+            background: linear-gradient(135deg, #0061ff 0%, #60efff 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* --- Container --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* --- Section Titles --- */
+        h2.section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        h2.section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #0061ff;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* --- History Section --- */
+        .history-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
+        }
+
+        .history-content {
+            text-align: justify;
+        }
+
+        /* --- Personnel / Teacher Section --- */
+        .teacher-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .teacher-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .teacher-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #ddd; /* สีสำรองกรณีไม่มีรูป */
+        }
+
+        .teacher-info {
+            padding: 20px;
+        }
+
+        .teacher-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .teacher-role {
+            color: #0061ff;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .teacher-edu {
+            font-size: 0.85rem;
+            color: #666;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        /* --- Responsive Tweaks --- */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .teacher-grid { grid-template-columns: 1fr; } 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>แผนกวิชาเทคโนโลยีสารสนเทศ</h1>
+        <p>Information Technology Department</p>
+        <p>มุ่งเน้นสร้างนักพัฒนา และผู้เชี่ยวชาญด้านไอทีสู่สากล</p>
+    </header>
+
+    <div class="container">
+
+        <section id="history">
+            <h2 class="section-title">ประวัติความเป็นมา</h2>
+            <div class="history-section">
+                <div class="history-content">
+                    <p>
+                        <strong>แผนกวิชาเทคโนโลยีสารสนเทศ</strong> ก่อตั้งขึ้นเมื่อปี พ.ศ. 25XX โดยมีวัตถุประสงค์เพื่อผลิตบุคลากรที่มีความรู้ความสามารถด้านคอมพิวเตอร์และเทคโนโลยีสารสนเทศ เพื่อรองรับการขยายตัวของเศรษฐกิจดิจิทัล
+                    </p>
+                    <br>
+                    <p>
+                        ตลอดระยะเวลาที่ผ่านมา ทางแผนกได้มีการปรับปรุงหลักสูตรการเรียนการสอนอย่างต่อเนื่องให้ทันต่อยุคสมัย โดยเน้นทั้งทฤษฎีและการปฏิบัติจริง (Project-based Learning) ครอบคลุมทั้งด้านการเขียนโปรแกรม (Programming), เครือข่ายคอมพิวเตอร์ (Network), และกราฟิกดีไซน์ เพื่อให้นักศึกษามีทักษะที่พร้อมสำหรับการทำงานในสถานประกอบการจริง
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="personnel">
+            <h2 class="section-title">คณะครูและบุคลากร</h2>
+            
+            <div class="teacher-grid">
+                
+                <div class="teacher-card">
+                    <img src="https://placehold.co/400x300/2c3e50/white?text=Head+Of+Dept" alt="หัวหน้าแผนก" class="teacher-img">
+                    <div class="teacher-info">
+                        <div class="teacher-name">อาจารย์สมชาย ใจดี</div>
+                        <div class="teacher-role">หัวหน้าแผนกวิชา</div>
+                        <div class="teacher-edu">
+                            วท.ม. เทคโนโลยีสารสนเทศ<br>
+                            วท.บ. วิทยาการคอมพิวเตอร์
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="https://placehold.co/400x300/3498db/white?text=Teacher+1" alt="ครูผู้สอน" class="teacher-img">
+                    <div class="teacher-info">
+                        <div class="teacher-name">อาจารย์วิไล รักเรียน</div>
+                        <div class="teacher-role">ครูผู้สอน / งานวิชาการ</div>
+                        <div class="teacher-edu">
+                            ค.อ.บ. วิศวกรรมคอมพิวเตอร์<br>
+                            เชี่ยวชาญด้าน: Web Development
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="https://placehold.co/400x300/e74c3c/white?text=Teacher+2" alt="ครูผู้สอน" class="teacher-img">
+                    <div class="teacher-info">
+                        <div class="teacher-name">อาจารย์นพดล คนเก่ง</div>
+                        <div class="teacher-role">ครูผู้สอน / งานกิจกรรม</div>
+                        <div class="teacher-edu">
+                            วท.บ. เทคโนโลยีสารสนเทศ<br>
+                            เชี่ยวชาญด้าน: IoT & Network
+                        </div>
+                    </div>
+                </div>
+
+                <div class="teacher-card">
+                    <img src="https://placehold.co/400x300/f1c40f/white?text=Teacher+3" alt="เจ้าหน้าที่" class="teacher-img">
+                    <div class="teacher-info">
+                        <div class="teacher-name">นางสาวสุดา พาเพลิน</div>
+                        <div class="teacher-role">เจ้าหน้าที่งานธุรการ</div>
+                        <div class="teacher-edu">
+                            ปวส. การจัดการสำนักงาน
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 แผนกวิชาเทคโนโลยีสารสนเทศ วิทยาลัย...</p>
+        <p>ติดต่อเรา: โทร 02-123-4567 | Email: contact@it-dept.ac.th</p>
+    </footer>
+
+</body>
+</html>
