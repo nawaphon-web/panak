@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+  <div class="max-w-md mx-auto mt-20 p-6 bg-white shadow-lg rounded-xl">
+    <h1 class="text-2xl font-bold mb-4 text-center">เข้าสู่ระบบ</h1>
+
+    <input id="username" class="border p-2 w-full mb-3 rounded" placeholder="ชื่อผู้ใช้" />
+    <input id="password" type="password" class="border p-2 w-full mb-4 rounded" placeholder="รหัสผ่าน" />
+
+    <button id="loginBtn"
+      class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition">
+      Login
+    </button>
+
+    <p id="msg" class="text-center mt-4 text-red-500"></p>
+
+    <p class="text-center mt-4">
+      ยังไม่มีบัญชี?  
+      <a href="register.html" class="text-green-600">สมัครสมาชิก</a>
+    </p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script>
+    const API_URL = "http://localhost:5000/api/login";
+
+    document.getElementById("loginBtn").addEventListener("click", async () => {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const msg = document.getElementById("msg");
+
+      msg.textContent = "กำลังตรวจสอบ...";
+
+      try {
+        const res = await axios.post(API_URL, { username, password });
+
+        if (res.data.token) {
+          msg.style.color = "green";
+          msg.textContent = "เข้าสู่ระบบสำเร็จ ✔";
+
+          localStorage.setItem("token", res.data.token);
+
+          setTimeout(() => {
+            window.location.href = "index.html";  // <<==== ลิงก์มาที่นี่
+          }, 1000);
+        }
+
+      } catch (err) {
+        msg.style.color = "red";
+        msg.textContent = "❌ ชื่อผู้ใช้หรือรหัสผ่านผิด";
+      }
+    });
+  </script>
+
+</body>
+</html>
